@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "esnext", // 指定编译后的 JavaScript 目标版本为最新的 ECMAScript 特性（ESNext）
+    "module": "ESNext", // 使用最新的 ES 模块标准（如动态导入）
+    "moduleResolution": "Bundler",
+
+    "useDefineForClassFields": true, //类字段使用 Object.defineProperty 定义，遵循 ES 标准行为，避免继承时值被覆盖
+    "strict": true, // 启用所有严格类型检查选项
+    "noLib": false, //包含 TypeScript 内置类型声明（如 lib.d.ts），无需手动引入
+
+    "forceConsistentCasingInFileNames": true, //强制文件名大小写一致
+    "allowSyntheticDefaultImports": true, //允许从无默认导出的模块
+    "strictFunctionTypes": false, // 禁用函数参数类型的严格逆变检查，允许父类型参数传递给子类型。
+
+    "baseUrl": ".", //设置模块解析的基准目录为项目根目录，配合 paths 使用。
+    "allowJs": true, // 允许编译 JavaScript 文件
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true, // 支持导入 JSON 文件
+    "noUnusedLocals": false, // 禁止未使用的局部变量
+    "noUnusedParameters": false, // 禁止未使用的函数参数
+    "experimentalDecorators": true, // 启用实验性装饰器语法
+    "lib": ["dom", "esnext"], // 包含 DOM 和最新 ES 特性类型定义
+    "noImplicitAny": false, // 允许隐式的 any 类型，关闭后不强制显式类型声明
+    "skipLibCheck": true, // 跳过第三方库类型检查
+    "removeComments": true, // 移除编译输出中的注释
+    "paths": {
+      "@/*": ["src/*"],
+      "@t/*": ["types/*"]
+    },
+
+    "types": ["naive-ui/volar"] // 启用 Volar 类型支持
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}

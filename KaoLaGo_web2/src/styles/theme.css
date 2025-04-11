@@ -1,0 +1,9 @@
+.dark {
+  --layout-bg-color: #212429;
+  --content-bg-color: #292c3a;
+}
+
+.light {
+  --layout-bg-color: #f5f7fb;
+  --content-bg-color: #fff;
+}

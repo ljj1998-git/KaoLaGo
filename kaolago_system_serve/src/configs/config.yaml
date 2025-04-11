@@ -1,0 +1,23 @@
+db:
+  mysql:
+    host: 'localhost'
+    name: kaolago
+    port: 3306
+    username: root
+    password: root
+  redis:
+    host: 'localhost'
+    port: 6379
+    name: 0
+    username: root
+    password: root
+jwt:
+  secret: 'lucky'
+  expiration: 6000
+crypto:
+  algorithm: 'sha256'
+  salt: 'lucky'
+  secret: 'lucky'
+  hex:
+    key: 'U6KXl21KHL6D1H9X'
+    iv: '0102030405060708'
